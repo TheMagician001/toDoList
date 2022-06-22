@@ -1,0 +1,31 @@
+<div class="main">
+  <h1>Everyday To Do List</h1>
+  <label for="addItemInput">What would you like to do today?</label>
+<br>
+<br>
+<input
+  #newItem
+  placeholder="Is there something to do?"
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput"
+/>
+
+<button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
+
+<br>
+<br>
+
+  <ul>
+    <li *ngFor="let item of items">{{item.description}}</li>
+  </ul>
+</div>
+<!-- <h2>{{items.length}} <span *ngIf="items.length === 1; else elseBlock">item</span>
+  <ng-template #elseBlock>items</ng-template></h2>
+  
+  <ul>
+    <li *ngFor="let item of items">
+      <app-item (remove)="remove(item)" [item]="item"></app-item>
+    </li>
+  </ul>
+   -->
