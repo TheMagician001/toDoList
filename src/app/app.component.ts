@@ -14,11 +14,11 @@ export class AppComponent {
   filter: 'all' | 'active' | 'done' = 'all';
 
   allItems = [
-    { description: 'Program', done: true },
-    { description: 'Work Out', done: true },
-    { description: 'read with Maria', done: false },
+    { description: 'Program', done: false },
+    { description: 'Work Out', done: false },
+    { description: 'read with Maria', done: true },
     { description: 'Train with Ricky', done: false },
-    { description: 'tell caroline i love her', done: false },
+    { description: 'tell caroline i love her', done: true },
   ];
 
   get items() {
